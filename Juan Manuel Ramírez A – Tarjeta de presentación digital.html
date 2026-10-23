@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Juan Manuel Ramírez A – Tarjeta de presentación digital</title>
+<style>
+:root{--bg:#eaf1f8;--card:#ffffff;--ink:#1d2a3a;--mut:#56657a;--p1:#3d6fd8;--p2:#17a398;--p3:#f4a63a;--chip:#e8f0fb;--chipink:#2a4fa8;--line:#e3eaf3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1722;--card:#18222f;--ink:#eef3f9;--mut:#a9b6c7;--p1:#6a93ee;--p2:#34c0b4;--p3:#f6b756;--chip:#233349;--chipink:#b9cffa;--line:#263446}}
+:root[data-theme="dark"]{--bg:#0f1722;--card:#18222f;--ink:#eef3f9;--mut:#a9b6c7;--p1:#6a93ee;--p2:#34c0b4;--p3:#f6b756;--chip:#233349;--chipink:#b9cffa;--line:#263446}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:radial-gradient(circle at 10% 0%,color-mix(in srgb,var(--p1) 18%,transparent),transparent 45%),radial-gradient(circle at 95% 100%,color-mix(in srgb,var(--p2) 18%,transparent),transparent 45%),var(--bg);color:var(--ink);font-family:"Segoe UI",Calibri,Helvetica,Arial,sans-serif;display:flex;justify-content:center;align-items:center;padding:22px 14px 30px;min-height:100%}
+.card{width:100%;max-width:1020px;display:grid;grid-template-columns:310px 1fr;background:var(--card);border-radius:22px;overflow:hidden;box-shadow:0 14px 40px rgba(40,70,120,.18);animation:rise .7s ease both}
+.side{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;color:#fff;padding:32px 22px 26px;background:linear-gradient(150deg,var(--p1),var(--p2),var(--p1));background-size:220% 220%;animation:flow 10s ease-in-out infinite}
+.mono{position:relative;width:96px;height:96px;margin-bottom:16px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:33px;font-weight:700;letter-spacing:2px;border:3px solid rgba(255,255,255,.75)}
+.mono::before{content:"";position:absolute;inset:-9px;border-radius:50%;border:2px solid rgba(255,255,255,.45);animation:pulse 2.6s ease-out infinite}
+h1{margin:0;font-size:25px;line-height:1.2;letter-spacing:.3px}
+.role{margin:8px 0 12px;font-size:14.5px;line-height:1.4;opacity:.95;color:#fff}
+.tag{display:inline-block;background:var(--p3);color:#3a2705;font-size:11.5px;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:999px}
+.contact{margin-top:auto;padding-top:22px;width:100%;display:grid;gap:9px}
+.btn{display:block;text-align:center;font-size:14px;font-weight:700;padding:11px 8px;border-radius:12px;background:rgba(255,255,255,.95);color:#2a4fa8;text-decoration:none;transition:transform .2s,box-shadow .2s;overflow-wrap:anywhere}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.2)}
+.btn.warm{background:var(--p3);color:#3a2705}
+.btn.ghost{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.loc{margin:4px 0 0;font-size:12.5px;color:#fff;opacity:.9}
+.main{padding:24px 26px 26px;display:grid;grid-template-columns:1fr 1fr;gap:20px 26px;align-content:start}
+.sec{animation:rise .7s ease both}
+.sec.full{grid-column:1/-1}
+.sec:nth-child(1){animation-delay:.1s}.sec:nth-child(2){animation-delay:.16s}.sec:nth-child(3){animation-delay:.22s}.sec:nth-child(4){animation-delay:.28s}.sec:nth-child(5){animation-delay:.34s}.sec:nth-child(6){animation-delay:.4s}.sec:nth-child(7){animation-delay:.46s}.sec:nth-child(8){animation-delay:.52s}
+h2{display:flex;align-items:center;gap:8px;margin:0 0 9px;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--p1)}
+h2::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--p3)}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+p{margin:0;font-size:14px;line-height:1.55;color:var(--mut)}
+b{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{background:var(--chip);color:var(--chipink);font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;transition:transform .2s,background .2s,color .2s}
+.chip:hover{transform:translateY(-2px);background:var(--p1);color:#fff}
+.chip.ai{background:color-mix(in srgb,var(--p2) 16%,var(--card));color:color-mix(in srgb,var(--p2) 70%,var(--ink))}
+.chip.ai:hover{background:var(--p2);color:#fff}
+.chip.hot{background:color-mix(in srgb,var(--p3) 28%,var(--card));color:var(--ink)}
+.box{border:1px solid var(--line);border-left:4px solid var(--p2);border-radius:12px;padding:11px 14px;background:color-mix(in srgb,var(--p2) 6%,var(--card))}
+.box p{margin-top:4px;font-size:13.5px}
+.row{display:flex;align-items:flex-start;gap:10px;margin-top:8px;font-size:14px;line-height:1.5;color:var(--mut)}
+.row:first-of-type{margin-top:0}
+.row i{flex:none;width:8px;height:8px;margin-top:7px;border-radius:50%;background:var(--p1)}
+.link{color:var(--p1);text-decoration:none;font-weight:600}
+.link:hover{text-decoration:underline}
+.more{display:inline-block;margin-top:9px;font-size:13.5px}
+.theme{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.18);color:#fff;font-size:17px;cursor:pointer;transition:transform .3s,background .2s}
+.theme:hover{transform:rotate(180deg);background:rgba(255,255,255,.3)}
+.copy{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.mini{font:inherit;font-size:12.5px;font-weight:600;padding:8px 6px;border-radius:10px;border:1px dashed rgba(255,255,255,.65);background:transparent;color:#fff;cursor:pointer;transition:background .2s,transform .2s}
+.mini:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+.mini.ok{background:var(--p3);border-color:var(--p3);color:#3a2705}
+.main{position:relative}
+.main::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--p2) 13%,transparent),transparent 70%);opacity:0;transition:opacity .3s}
+.main:hover::before{opacity:1}
+.main>*{position:relative}
+.sec.hid{opacity:0;transform:translateY(16px);animation:none}
+.sec{transition:opacity .6s ease,transform .6s ease}
+.box{transition:transform .2s,box-shadow .2s}
+.box:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(40,70,120,.14)}
+.row{transition:transform .2s}
+.row:hover{transform:translateX(4px)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--p3);outline-offset:2px}
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--ink);color:var(--card);font-size:13.5px;font-weight:600;padding:10px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:10}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.proj{cursor:pointer;padding:9px 11px;border-radius:12px;border:1px solid transparent;transition:background .2s,border-color .2s,transform .2s}
+.proj:hover{background:color-mix(in srgb,var(--p1) 7%,transparent)}
+.proj.on{background:var(--chip);border-color:var(--p1)}
+.techs{margin-top:12px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);border-left:4px solid var(--p3);background:color-mix(in srgb,var(--p3) 7%,var(--card))}
+.techs.swap{animation:rise .4s ease both}
+.th{font-size:13px;margin-bottom:8px}
+.tn{margin-top:9px;font-size:12.5px}
+.hint{margin-top:8px;font-size:12px;opacity:.8}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes flow{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+@keyframes pulse{0%{transform:scale(.92);opacity:.9}100%{transform:scale(1.25);opacity:0}}
+@media (max-width:780px){.card{grid-template-columns:1fr;max-width:480px}.main{grid-template-columns:1fr;padding:20px}.contact{margin-top:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="card">
+  <aside class="side">
+    <button class="theme" id="theme" type="button" aria-label="Cambiar entre modo claro y oscuro" title="Modo claro / oscuro">◐</button>
+    <div class="mono">JM</div>
+    <h1>Juan Manuel Ramírez A</h1>
+    <p class="role">Estudiante de Ingeniería de Sistemas y Computación</p>
+    <span class="tag">PASANTE · UNIVERSIDAD DE CUNDINAMARCA</span>
+    <div class="contact">
+      <div class="duo">
+        <a class="btn" href="tel:+573008165268" target="_blank" rel="noopener">Llamar</a>
+        <a class="btn warm" href="https://wa.me/573008165268" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <a class="btn ghost" href="mailto:Juanmanuelra5@gmail.com">Juanmanuelra5@gmail.com</a>
+      <a class="btn ghost" href="https://github.com/JMR564" target="_blank" rel="noopener">GitHub · github.com/JMR564</a>
+      <div class="copy">
+        <button class="mini" type="button" data-copy="+57 300 816 5268" data-ok="Teléfono copiado">Copiar teléfono</button>
+        <button class="mini" type="button" data-copy="Juanmanuelra5@gmail.com" data-ok="Correo copiado">Copiar correo</button>
+      </div>
+      <p class="loc">Chía, Cundinamarca · (300) 816-5268</p>
+    </div>
+  </aside>
+
+  <section class="main">
+    <div class="sec full">
+      <h2>Perfil</h2>
+      <p>Estudiante de noveno semestre de Ingeniería de Sistemas y Computación en la Universidad de Cundinamarca, actualmente realizando mi pasantía en la misma institución. Me caracterizo por mi sentido de la responsabilidad, honestidad y ética de trabajo.</p>
+      <p style="margin-top:8px">Me interesa trabajar en proyectos tecnológicos donde pueda aplicar mis conocimientos en programación, con mayor especialización en <b>desarrollo back end</b>, bases de datos e inteligencia artificial, y seguir aprendiendo de forma constante. Mis proyectos individuales están disponibles en mi <a class="link" href="https://github.com/JMR564" target="_blank" rel="noopener">perfil de GitHub</a>.</p>
+    </div>
+
+    <div class="sec full">
+      <h2>Formación</h2>
+      <div class="box"><b>Universidad de Cundinamarca | Pregrado en Ingeniería de Sistemas y Computación</b><p>2022 – Actual (noveno semestre)</p></div>
+      <div class="box" style="margin-top:9px"><b>Institución Educativa Departamental Rafael Pombo Briceño | Bachiller técnico</b><p>2021</p></div>
+    </div>
+
+    <div class="sec">
+      <h2>Competencias técnicas</h2>
+      <div class="chips"><span class="chip hot">Back end</span><span class="chip">Python</span><span class="chip">Java</span><span class="chip">SQL</span><span class="chip">Power BI</span></div>
+    </div>
+
+    <div class="sec">
+      <h2>Herramientas de IA</h2>
+      <div class="chips"><span class="chip ai">Gemini</span><span class="chip ai">Claude</span><span class="chip ai">ChatGPT</span><span class="chip ai">Copilot</span><span class="chip ai">Perplexity</span></div>
+    </div>
+
+    <div class="sec">
+      <h2>Pasantía</h2>
+      <div class="box"><b>Universidad de Cundinamarca</b><p>Actualización técnica y conceptual de los Planes de Aprendizaje Digital (PAD) en los distintos CADI de programas de posgrado. Ejecución de ajustes y correcciones en los PAD académicos con estricto apego a las hojas de revisión e lineamientos institucionales de la UdeC.</p></div>
+    </div>
+
+    <div class="sec">
+      <h2>Idiomas</h2>
+      <div class="chips"><span class="chip">Español · nativo</span><span class="chip">Inglés · B1</span></div>
+    </div>
+
+    <div class="sec">
+      <h2>Proyecto destacado</h2>
+      <div class="box"><b>Detector de Estrés</b><p>Python, OpenCV, MediaPipe y FER. Detecta señales visibles asociadas al estrés (parpadeo, movimiento de la cabeza y expresiones faciales) con análisis de video en tiempo real.</p></div>
+      <a class="link more" href="https://github.com/JMR564/DetectorEstres" target="_blank" rel="noopener">Ver proyecto en GitHub →</a>
+      <div class="techs">
+        <p class="th">Tecnologías de <b>Detector de Estrés</b></p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">MediaPipe</span><span class="chip">FER</span><span class="chip">NumPy</span><span class="chip">Tkinter</span></div>
+        <p class="tn">Busca identificar señales visuales asociadas al estrés; no es una herramienta de diagnóstico médico.</p>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2>Proyectos secundarios</h2>
+      <div class="row proj on" role="button" tabindex="0" aria-pressed="true" data-p="agua"><i></i><span><a class="link" href="https://github.com/JMR564/IndiceDeRiesgoCalidadAgua" target="_blank" rel="noopener">Índice de Riesgo de Calidad del Agua</a>: aplicación web con Machine Learning que estima el riesgo de la calidad del agua.</span></div>
+      <div class="row proj" role="button" tabindex="0" aria-pressed="false" data-p="ia"><i></i><span><a class="link" href="https://github.com/JMR564/ProyectoIA" target="_blank" rel="noopener">ProyectoIA</a>: red neuronal en Python que predice el nivel de procrastinación en estudiantes.</span></div>
+      <div class="techs" id="techs" aria-live="polite">
+        <p class="th">Tecnologías de <b id="tname"></b></p>
+        <div class="chips" id="tchips"></div>
+        <p class="tn" id="tnote"></p>
+        <a class="link more" id="tlive" href="https://indicederiesgocalidadagua.onrender.com/" target="_blank" rel="noopener">Probar la aplicación →</a>
+      </div>
+      <p class="hint">Toca un proyecto para ver sus tecnologías.</p>
+    </div>
+
+    <div class="sec full">
+      <h2>Formación en curso</h2>
+      <div class="chips"><span class="chip">Claude Academy</span><span class="chip">SQL · aprendesql.dev (con certificado)</span><span class="chip">Python · Udemy</span></div>
+    </div>
+  </section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+  var root=document.documentElement,toast=document.getElementById('toast'),tt;
+  function say(m){toast.textContent=m;toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},1800)}
+  function dark(){var t=root.getAttribute('data-theme');return t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches}
+  try{var sv=localStorage.getItem('tema');if(sv)root.setAttribute('data-theme',sv)}catch(e){}
+  document.getElementById('theme').addEventListener('click',function(){
+    var n=dark()?'light':'dark';root.setAttribute('data-theme',n);
+    try{localStorage.setItem('tema',n)}catch(e){}
+    say(n==='dark'?'Modo oscuro':'Modo claro');
+  });
+  document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){
+    var v=b.getAttribute('data-copy'),ok=b.getAttribute('data-ok');
+    function done(){b.classList.add('ok');say(ok);setTimeout(function(){b.classList.remove('ok')},1500)}
+    function fb(){var t=document.createElement('textarea');t.value=v;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();try{document.execCommand('copy');done()}catch(e){say('No se pudo copiar: '+v)}document.body.removeChild(t)}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(done,fb)}else{fb()}
+  })});
+  var main=document.querySelector('.main');
+  main.addEventListener('pointermove',function(e){var r=main.getBoundingClientRect();main.style.setProperty('--mx',(e.clientX-r.left)+'px');main.style.setProperty('--my',(e.clientY-r.top)+'px')});
+  var P={
+    agua:{n:'Índice de Riesgo de Calidad del Agua',t:['Python','Pandas','Scikit-learn','Gradient Boosting','Flask','HTML/CSS'],note:'Usa pH, turbiedad, color y coliformes totales y fecales para clasificar el riesgo en cinco niveles, desde sin riesgo hasta inviable sanitariamente.',live:true},
+    ia:{n:'ProyectoIA',t:['Python','Pandas','NumPy','Scikit-learn','Matplotlib','Seaborn','Joblib'],note:'Red neuronal MLP (MLPClassifier) que clasifica la procrastinación en bajo, medio y alto, con validación cruzada, matriz de confusión, accuracy y F1-score.',live:false}
+  };
+  var rows=document.querySelectorAll('.proj'),box=document.getElementById('techs');
+  function pick(k){
+    var d=P[k];
+    rows.forEach(function(r){var on=r.getAttribute('data-p')===k;r.classList.toggle('on',on);r.setAttribute('aria-pressed',on?'true':'false')});
+    document.getElementById('tname').textContent=d.n;
+    var c=document.getElementById('tchips');c.innerHTML='';
+    d.t.forEach(function(x){var e=document.createElement('span');e.className='chip';e.textContent=x;c.appendChild(e)});
+    document.getElementById('tnote').textContent=d.note;
+    document.getElementById('tlive').style.display=d.live?'inline-block':'none';
+    box.classList.remove('swap');void box.offsetWidth;box.classList.add('swap');
+  }
+  rows.forEach(function(r){
+    r.addEventListener('click',function(e){if(e.target.closest('a'))return;pick(r.getAttribute('data-p'))});
+    r.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&!e.target.closest('a')){e.preventDefault();pick(r.getAttribute('data-p'))}});
+  });
+  pick('agua');
+  var secs=document.querySelectorAll('.sec');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('hid');io.unobserve(x.target)}})},{threshold:.12});
+    secs.forEach(function(s){var r=s.getBoundingClientRect();if(r.top>window.innerHeight){s.classList.add('hid');io.observe(s)}});
+  }
+})();
+</script>
+</body>
+</html>
